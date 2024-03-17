@@ -60,7 +60,7 @@ export default class ListOfProducts extends Component {
   ];
   render() {
     return (
-      <div>
+      <div className="row">
         {this.productList.map(product => (
           <Product productdetails={product} />
         ))}
