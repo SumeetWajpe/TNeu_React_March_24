@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Rating from "../rating/rating.component";
 
 export default class Product extends Component {
   render() {
@@ -14,7 +15,9 @@ export default class Product extends Component {
 
           <div className="card-body">
             <h5>{this.props.productdetails.title}</h5>
-            <p>{this.props.productdetails.rating}</p>
+            <p>
+              <Rating noofstars={this.props.productdetails.rating} />
+            </p>
             <p> ₹.{this.props.productdetails.price}</p>
             <button className="btn btn-primary">
               {this.props.productdetails.likes}
