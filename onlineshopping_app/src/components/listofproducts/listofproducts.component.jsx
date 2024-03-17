@@ -49,7 +49,7 @@ export default class ListOfProducts extends Component {
     {
       id: 5,
       title: "JBL Speakers",
-      rating: 3,
+      rating: 2,
       price: 5000,
       likes: 800,
       imageUrl:

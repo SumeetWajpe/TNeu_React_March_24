@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Rating from "../rating/rating.component";
 
 export default class Product extends Component {
+  state = { currLikes: 100 };
   render() {
     return (
       <div className="col-md-3 g-1">
@@ -19,12 +20,21 @@ export default class Product extends Component {
               <Rating noofstars={this.props.productdetails.rating} />
             </p>
             <p> ₹.{this.props.productdetails.price}</p>
-            <button className="btn btn-primary">
-              {this.props.productdetails.likes}
+            <button
+              className="btn btn-primary"
+              onClick={() => this.HandleIncrementLikes()}
+            >
+              {this.state.currLikes}
             </button>
           </div>
         </div>
       </div>
     );
+  }
+
+  HandleIncrementLikes() {
+    //this.props.productdetails.likes++; // this does not work as props are readonly
+    // this.state.currLikes++; // state is immutable
+    this.setState({ currLikes: this.state.currLikes + 1 }); // setState - predefined
   }
 }
