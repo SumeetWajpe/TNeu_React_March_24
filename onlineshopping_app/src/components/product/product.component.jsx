@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Rating from "../rating/rating.component";
 
 export default class Product extends Component {
-  state = { currLikes: 100 };
+  state = { currLikes: this.props.productdetails.likes };
   render() {
     return (
       <div className="col-md-3 g-1">
