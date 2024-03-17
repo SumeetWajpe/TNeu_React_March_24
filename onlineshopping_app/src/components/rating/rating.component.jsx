@@ -5,7 +5,7 @@ class Rating extends React.Component {
     let ratings = [];
     for (let index = 0; index < this.props.noofstars; index++) {
       ratings.push(
-        <span style={{ color: "orange" }}>
+        <span style={{ color: "orange" }} key={index}>
           <i className="fa-solid fa-star"></i>
         </span>,
       );
