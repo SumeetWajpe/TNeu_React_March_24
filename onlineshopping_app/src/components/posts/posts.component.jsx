@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-export default class Posts extends Component {
+export default class CPosts extends Component {
   state = { posts: [] };
   componentDidMount() {
     let thePromise = axios.get("https://jsonplaceholder.typicode.com/posts");
