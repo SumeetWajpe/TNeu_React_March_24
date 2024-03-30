@@ -1,40 +1,35 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Rating from "../rating/rating.component";
 
-export default class Product extends Component {
-  state = { currLikes: this.props.productdetails.likes };
-  render() {
-    return (
-      <div className="col-md-3 g-1">
-        <div className="card">
-          <img
-            src={this.props.productdetails.imageUrl}
-            alt={this.props.productdetails.title}
-            className="card-img-top"
-            height="200px"
-          />
+const Product = props => {
+  const [currLikes, setCurrLikes] = useState(props.productdetails.likes);
+  return (
+    <div className="col-md-3 g-1">
+      <div className="card">
+        <img
+          src={props.productdetails.imageUrl}
+          alt={props.productdetails.title}
+          className="card-img-top"
+          height="200px"
+        />
 
-          <div className="card-body">
-            <h5>{this.props.productdetails.title}</h5>
-            <p>
-              <Rating noofstars={this.props.productdetails.rating} />
-            </p>
-            <p> ₹.{this.props.productdetails.price}</p>
-            <button
-              className="btn btn-primary"
-              onClick={() => this.HandleIncrementLikes()}
-            >
-              {this.state.currLikes}
-            </button>
-          </div>
+        <div className="card-body">
+          <h5>{props.productdetails.title}</h5>
+          <p>
+            <Rating noofstars={props.productdetails.rating} />
+          </p>
+          <p> ₹.{props.productdetails.price}</p>
+          <button
+            className="btn btn-primary"
+            onClick={() => setCurrLikes(currLikes + 1)}
+          >
+            {currLikes}
+            <i class="fa-solid fa-thumbs-up"></i>
+          </button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
-  HandleIncrementLikes() {
-    //this.props.productdetails.likes++; // this does not work as props are readonly
-    // this.state.currLikes++; // state is immutable
-    this.setState({ currLikes: this.state.currLikes + 1 }); // setState - predefined
-  }
-}
+export default Product;

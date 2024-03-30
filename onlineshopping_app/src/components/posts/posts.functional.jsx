@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 const Posts = () => {
   let [posts, setPosts] = useState([]);
   // componentDidMount() + componentDidUpdate()
@@ -18,9 +19,11 @@ const Posts = () => {
         <h2>All Posts</h2>
       </header>
       <main>
-        <ul>
+        <ul className="list-group">
           {posts.map(p => (
-            <li key={p.id}>{p.title}</li>
+            <li key={p.id} className="list-group-item">
+              <Link to={"/postdetails/" + p.id}>{p.title}</Link>
+            </li>
           ))}
         </ul>
       </main>
