@@ -32,6 +32,11 @@ export default function Navbar() {
                   Posts
                 </Link>
               </li>
+              <li class="nav-item">
+                <Link class="nav-link" to="/newproduct">
+                  New Product
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

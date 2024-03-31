@@ -9,6 +9,7 @@ import { GetPostById } from "../posts/getpostbyid.component";
 import Navbar from "../navbar/navbar.component";
 import Error from "../Error/error.component";
 import PostDetails from "../postdetails/postdetails.component";
+import NewProduct from "../newproduct/newproduct.component";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" Component={ListOfProducts}></Route>
+        <Route path="/newproduct" Component={NewProduct}></Route>
         <Route path="/posts" Component={Posts}></Route>
+
         <Route path="/postdetails/:id" Component={PostDetails}></Route>
         <Route path="*" Component={Error}></Route>
       </Routes>
