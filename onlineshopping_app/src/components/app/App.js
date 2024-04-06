@@ -10,6 +10,7 @@ import Navbar from "../navbar/navbar.component";
 import Error from "../Error/error.component";
 import PostDetails from "../postdetails/postdetails.component";
 import NewProduct from "../newproduct/newproduct.component";
+import ProductDetails from "../productdetails/productdetails.component";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" Component={ListOfProducts}></Route>
+        <Route path="/productdetails" Component={ProductDetails}></Route>
+
         <Route path="/newproduct" Component={NewProduct}></Route>
         <Route path="/posts" Component={Posts}></Route>
 

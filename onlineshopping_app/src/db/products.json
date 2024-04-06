@@ -68,6 +68,14 @@
       "rating": 4,
       "likes": 900,
       "imageUrl": "https://ptron.in/cdn/shop/products/B0BQC5NT44.MAIN.jpg?v=1678031508"
+    },
+    {
+      "id": 9,
+      "title": "Water Bottle",
+      "price": 1000,
+      "rating": 3,
+      "likes": 300,
+      "imageUrl": "https://m.media-amazon.com/images/I/81zdMi6Dz7L._AC_UF1000,1000_QL80_.jpg"
     }
   ]
 }
